@@ -7,15 +7,24 @@ data = sys.stdin.read().strip()
 data_list = data.split('\n')
 
 # 데이터 처리 예시:
-name, birth, time, gender, calendar = data_list
+name, year,month,day, time, gender, calendar = data_list
 name="성명:"+name
-birth="생년월일:"+birth
+birth="생년월일:"+year+"년"+month+"월"+day+"일"
 time="시간:"+time
 gender="성별:"+gender
 calendar="사용달력:"+ calendar
 processed_data=name,birth,time,gender,calendar
+result=("1",
+        "북쪽",
+        "검정계열",
+        "짠맛",
+        "과일",
+        "동물",
+        "심장",
+        "인자,사랑,인(仁)",
+        "오늘은 매사에 양보하고, 맘에 안 드는 사람이나 일이 있어도 화내지 마세요")
 
 # 처리된 데이터를 C#에게 반환
-response = '\n'.join(processed_data)
+response = '\n'.join(result)
 print(response)
 sys.stdout.flush()
