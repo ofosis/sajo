@@ -5,33 +5,37 @@ from selenium.webdriver.support import expected_conditions as EC
 
 import time
 
+def SendKeyByName(element_name, key_values):
+    input_element = wait.until(EC.element_to_be_clickable((By.NAME, element_name)))
+    input_element.send_keys(key_values)
+    return
 def GetLuckyItem(userdata):
+    global web, wait
     web = webdriver.Chrome()
     web.get('https://sazoo.com/ss/run/life/todayitem/')
-    time.sleep(2)
+    wait = WebDriverWait(web, 10)
 
     이름=userdata['Name']
-    이름입력 = web.find_element(By.NAME,'mNA')
-    이름입력.send_keys(이름)
+    SendKeyByName('mNA',이름)
 
     년도=userdata['BirthYear']
-    년도입력 = web.find_element(By.NAME,'mYY')
-    년도입력.send_keys(년도)
+    SendKeyByName('mYY', 년도)
 
     월=userdata['BirthMonth']
-    print(월)
-    일=userdata['BirthDay']
-    print(일)
-    시간=userdata['BirthTime']
-    print(시간)
-    성별='남성' if userdata['isMale'] else '여성'
-    print(성별)
-    달력=userdata['Calendar']
-    print(달력)
+    SendKeyByName('mMM', 월)
 
-    #운세보러가기 = web.find_element(By.CSS_SELECTOR,'#target_yyyy')
-    #운세보러가기.click()
-    time.sleep(3)
+    일=userdata['BirthDay']
+    SendKeyByName('mDD', 일)
+
+    시간=userdata['BirthTime']
+    SendKeyByName('mHH', 시간)
+
+    성별='남성' if userdata['isMale'] else '여성'
+    SendKeyByName('mSE', 성별)
+
+    달력=userdata['Calendar']
+    SendKeyByName('mSL', 달력)
+
     web.execute_script("javascript:FormCheck()")
     time.sleep(5)
     print(7)
