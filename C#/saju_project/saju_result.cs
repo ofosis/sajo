@@ -29,6 +29,7 @@ namespace saju_project2 {
             label_Guide.Text = data.Guide;
             label_mind.Text = data.Mind;
             label_taste.Text = data.Flavor;
+            textBox1.Text = $"총운:{data.NaverSummary}\n{ data.NaverDetail}";
         }
 
         private void btn_result_Click(object sender, EventArgs e) {

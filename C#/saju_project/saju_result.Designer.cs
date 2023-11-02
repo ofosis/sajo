@@ -47,6 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +69,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(203)))), ((int)(((byte)(167)))));
             this.panel2.BackgroundImage = global::saju_project2.Properties.Resources._5_1;
+            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label_animal);
             this.panel2.Controls.Add(this.label_fruit);
             this.panel2.Controls.Add(this.label_taste);
@@ -338,6 +340,14 @@
             this.label3.Text = "◐ 사주 풀이 ◑";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(443, 32);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 71);
+            this.textBox1.TabIndex = 20;
+            // 
             // saju_result
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -384,5 +394,6 @@
         private System.Windows.Forms.Label label_taste;
         private System.Windows.Forms.Label label_fruit;
         private System.Windows.Forms.Label label_animal;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

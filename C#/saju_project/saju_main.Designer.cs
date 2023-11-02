@@ -341,6 +341,7 @@
             this.tbox_name.Name = "tbox_name";
             this.tbox_name.Size = new System.Drawing.Size(123, 21);
             this.tbox_name.TabIndex = 5;
+            this.tbox_name.Text = "이창민";
             // 
             // cbox_gender
             // 
