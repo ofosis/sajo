@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #titletable{
+            width:100%;
+            border:0;
+            height:100px;
+            align:center;
+            font-size:45px;
+        }
+        #mytable{
+            width:100%;
+            align:center;
+        }
+    </style>
+</head>
+<table id="titletable" bgcolor="#990OFF" class="text-white">
+    <tr class="Light">
+        <th text-align="center">Saju.com</th>
+    </tr>
+
+</table>
+<body>
+<form name="inputForm" action="result.php" method="post"></form>
+<table id="mytable">
+    <tbody>
+    <tr>
+        <td height="32" text-align="center"
+            background="https://img.sazoo.com:8090/ss/images/ss/default/sazoo/digi_input_bg_img.gif"
+            style="padding-top:2px">
+            <table border-width="100%" border-border="0" border-cellspacing="0" border-cellpadding="0">
+                <tbody>
+                <tr>
+                    <td text-align="center" style="color:#FFFFFF; padding-top:2px; padding-left:30px">
+                        <b>
+                            <text-font text-color="#FFFFFF">
+                                생년월일시 정보를 입력하여 주십시요.
+                            </text-font>
+                        </b>
+                    </td>
+                    <td text-width="97"><a href="javascript:goSample('/ss/html/life/today_item_sample.htm');"><img
+                            src="https://img.sazoo.com:8090/ss/images/ss/default/sazoo/digi_sample02_bt.gif" width="90"
+                            height="20" border="0"></a></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td bgcolor="DBDBDB" style="padding:1px">
+            <table width="100%" border="0" cellpadding="0" cellspacing="4" bgcolor="#FFFFFF">
+                <tbody>
+                <tr>
+                    <td bgcolor="F7F7F7"
+                        style="padding-left:22px; padding-right:40px; padding-top:18px; padding-bottom:17px">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td height="30">
+                                    <table border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                        <tr>
+                                            <td width="80"><b>성명</b></td>
+                                            <td><input id="mNA" type="text" size="12" value=""></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="30">
+                                    <table border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                        <tr>
+                                            <td width="80"><b>생년월일시</b></td>
+                                            <td>
+                                                <input id="mYY" type="text" size="4" value="">
+
+                                                년
+                                                <select id="mMM">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+
+                                                </select>
+                                                월
+                                                <select id="mDD">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                    <option value="21">21</option>
+                                                    <option value="22">22</option>
+                                                    <option value="23">23</option>
+                                                    <option value="24">24</option>
+                                                    <option value="25">25</option>
+                                                    <option value="26">26</option>
+                                                    <option value="27">27</option>
+                                                    <option value="28">28</option>
+                                                    <option value="29">29</option>
+                                                    <option value="30">30</option>
+                                                    <option value="31">31</option>
+
+                                                </select>
+                                                일
+                                                <select id="mHH">
+                                                    <option value="99">생시모름</option>
+                                                    <option value="0">23:30~01:30 [자시]</option>
+                                                    <option value="2">01:30~03:30 [축시]</option>
+                                                    <option value="4">03:30~05:30 [인시]</option>
+                                                    <option value="6">05:30~07:30 [묘시]</option>
+                                                    <option value="8">07:30~09:30 [진시]</option>
+                                                    <option value="10">09:30~11:30 [사시]</option>
+                                                    <option value="12">11:30~13:30 [오시]</option>
+                                                    <option value="14">13:30~15:30 [미시]</option>
+                                                    <option value="16">15:30~17:30 [신시]</option>
+                                                    <option value="18">17:30~19:30 [유시]</option>
+                                                    <option value="20">19:30~21:30 [술시]</option>
+                                                    <option value="22">21:30~23:30 [해시]</option>
+
+                                                </select>
+                                                시 출생
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="30">
+                                    <table border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <table border="0" cellspacing="0" cellpadding="0">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td width="80"><b>성별</b></td>
+                                                        <td>
+                                                            <select id="mSE">
+                                                                <option value="0">남자</option>
+                                                                <option value="1">여자</option>
+
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td width="20"></td>
+                                            <td>
+                                                <table border="0" cellspacing="0" cellpadding="0">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td width="120"><b>양,음력</b>(평달,윤달)</td>
+                                                        <td>
+                                                            <select id="mSL">
+                                                                <option value="0">양력/평달</option>
+                                                                <option value="1">음력/평달</option>
+                                                                <option value="2">음력/윤달</option>
+
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td width="20"></td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table>
+                <tbody>
+                <tr>
+                    <td height="15">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td><a href="javascript:FormCheck();"><img
+                                        src="https://img.sazoo.com:8090/ss/images/ss/default/sazoo/digi_freestart_bt.gif"
+                                        width="105" height="25" border="0"></a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+    <div class="mt-3">
+        <button id="sendbtn" class="btn btn-dark">예측</button>
+    </div>
+</table>
+<div id="response"></div>
+<script src="IndexController.js"></script>
+<input type="hidden" name="" value="undefined">
+
+<input type="hidden" name="kind" value="">
+<tr>
+    <td>
+        <!-- 이용안내 시작-->
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr>
+                <td><a href="result">운세보러가기</a></td>
+            </tr>
+            <tr>
+                <td bgcolor="ECECEC" style="padding:1px">
+                    <table width="100%" border="0" cellpadding="0" cellspacing="4" bgcolor="#FFFFFF">
+                        <tbody>
+                        <tr>
+                            <td bgcolor="F7F7F7"
+                                style="padding-top:10px; padding-right:10px; padding-left:10px; padding-bottom:8px">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                    <tr>
+                                        <td>※ 본 컨텐츠는 재미있는 사주보기입니다.<br>
+                                            &nbsp;&nbsp;&nbsp; ***즐거운 시간되세요***.
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </td>
+</tr>
+</body>
+</html>
