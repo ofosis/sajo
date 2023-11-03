@@ -9,6 +9,7 @@ def process_post_request():
     try:
         data = request.get_json()
         # 여기에서 데이터를 처리하고 응답을 생성합니다.
+        print(data)
         json_result = test.test1(data)
         # JSON 파일로 저장
         json_data = json.dumps(json_result,ensure_ascii=False)

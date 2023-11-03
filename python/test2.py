@@ -6,7 +6,13 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 
 def GetLuck(userdata):
+    InitWebDriver()
+    doTodayNaver(userdata)
     return GetLuckyItem(userdata)+TODOTest(userdata)
+def InitWebDriver():
+    global web, wait
+    web = webdriver.Chrome()
+    wait = WebDriverWait(web, 10)
 def SendKeyByName(element_name, key_values):
     input_element = wait.until(EC.element_to_be_clickable((By.NAME, element_name)))
     input_element.send_keys(key_values)
@@ -67,10 +73,7 @@ def TranceTimeNum(time):
     return valuedict[time]
 
 def GetLuckyItem(userdata):
-    global web, wait
-    web = webdriver.Chrome()
     web.get('https://sazoo.com/ss/run/life/todayitem/')
-    wait = WebDriverWait(web, 10)
 
     이름 = userdata['Name']
     SendKeyByName('mNA', 이름)
@@ -86,7 +89,7 @@ def GetLuckyItem(userdata):
     if 일!=1:
         SendKeyByName('mDD', 일)
 
-    시간 = TranceTimeNum(userdata['BirthTime']) #여기를 건드려야 된다
+    시간 = TranceTimeNum(userdata['BirthTime'])
     SendKeyByName('mHH', 시간)
 
     성별 = '남성' if userdata['isMale'] else '여성'
@@ -110,26 +113,35 @@ def TODOTest(userdata):
     result.append(네이버상세)
     return result
 
+def ClickValueByName(key_values):
+    target_value = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, f'ul[data-value="solar"]')))
+    target_value.click()
+    target_value = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, f'li[data-value="{key_values}"] a')))
+    target_value.click()
+    return
+def SendValueById(element_id, key_values):
+    input_element = wait.until(EC.element_to_be_clickable((By.ID, element_id)))
+    input_element.send_keys(key_values)
+    return
+def ClickValueForGender(element_name, key_values):
+    target_value = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, f'.{element_name}[for="{key_values}"]')))
+    target_value.click()
+    return
 def doTodayNaver(userdata):
-    web = webdriver.Chrome()
     web.get('https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=%EC%98%A4%EB%8A%98%EC%9D%98+%EC%9A%B4%EC%84%B8')
 
-    이름 = userdata['Name']
+    성별 = 'l_man' if userdata['isMale'] else 'l_woman'
+    ClickValueForGender('_genderLabel',성별)
 
-    년도 = userdata['BirthYear']
+    생년월일=TranceBirthDay(userdata)
+    SendValueById("srch_txt",생년월일)
 
-    월 = userdata['BirthMonth']
+    달력 = TranceCalendar(userdata['Calendar'])
+    ClickValueByName(달력)
 
-    일 = userdata['BirthDay']
+    시간 = TranceTimeNum(userdata['BirthTime'])
 
-    시간 = TranceTimeNum(userdata['BirthTime'])  # 여기를 건드려야 된다
-    SendKeyByName('mHH', 시간)
 
-    성별 = '남성' if userdata['isMale'] else '여성'
-    SendKeyByName('mSE', 성별)
-
-    달력 = userdata['Calendar']
-    SendKeyByName('mSL', 달력)
     time.sleep(3)
     web.execute_script('result_solo()')
     time.sleep(5)
@@ -144,3 +156,15 @@ def doTodayNaver(userdata):
     finally:
         time.sleep(5)
         web.quit()
+def TranceCalendar(calendar):
+    valuedict = {
+        '양력/평달' : "solar",
+        '음력/평달' : "lunarGeneral",
+        '음력/윤달' : "lunarLeap"
+    }
+    return valuedict[calendar]
+def TranceBirthDay(userdata):
+    년도 = userdata['BirthYear']
+    월 = userdata['BirthMonth']
+    일 = userdata['BirthDay']
+    return f'{년도}{str(월).zfill(2)}{str(일).zfill(2)}'
