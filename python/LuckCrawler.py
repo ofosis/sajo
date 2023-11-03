@@ -1,0 +1,26 @@
+from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+
+import GetDataWithsaju as GDS
+import GetDataWithNaver as GDN
+
+def TranceLuckData(userdata):
+    data = GetLuck(userdata)
+    result = {
+        'Num':data[0],
+        'Direction':data[1],
+        'Color': data[2],
+        'Flavor': data[3],
+        'Fruit': data[4],
+        'Animal': data[5],
+        'BodyParts': data[6],
+        'Mind': data[7],
+        'Guide': data[8],
+        'NaverSummary': data[9],
+        'NaverDetail': data[10]
+    }
+    return result
+def GetLuck(userdata):
+    #GDN.doTodayNaver(userdata)
+    return GDS.GetLuckyItem(userdata)+GDN.TODOTest(userdata)
+
