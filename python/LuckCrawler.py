@@ -1,9 +1,5 @@
-from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
-
-import GetDataWithsaju as GDS
-import GetDataWithNaver as GDN
-
+from GetDataWithsaju import GetLuckyItem
+from GetDataWithNaver import TODOTest,doTodayNaver
 def TranceLuckData(userdata):
     data = GetLuck(userdata)
     result = {
@@ -21,6 +17,4 @@ def TranceLuckData(userdata):
     }
     return result
 def GetLuck(userdata):
-    #GDN.doTodayNaver(userdata)
-    return GDS.GetLuckyItem(userdata)+GDN.TODOTest(userdata)
-
+    return GetLuckyItem(userdata)+doTodayNaver(userdata)

@@ -1,4 +1,3 @@
-#사주닷컴
 def TranceTimeNum(time):
     valuedict = {
         0 : 99,
@@ -16,14 +15,15 @@ def TranceTimeNum(time):
         12 : 22
     }
     return valuedict[time]
-#네이버
+
 def TranceCalendar(calendar):
     valuedict = {
-        '양력/평달' : "solar",
-        '음력/평달' : "lunarGeneral",
-        '음력/윤달' : "lunarLeap"
+        '양력/평달' : 1,
+        '음력/평달' : 2,
+        '음력/윤달' : 3
     }
     return valuedict[calendar]
+
 def TranceBirthDay(userdata):
     년도 = userdata['BirthYear']
     월 = userdata['BirthMonth']

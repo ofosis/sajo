@@ -1,8 +1,8 @@
-from CrawlController import *
+from CrawlerController import *
 from UserDataConverter import *
 
-
 def GetLuckyItem(userdata):
+    web=InitWebDriver()
     web.get('https://sazoo.com/ss/run/life/todayitem/')
 
     이름 = userdata['Name']
@@ -30,10 +30,10 @@ def GetLuckyItem(userdata):
 
     web.execute_script("javascript:FormCheck()")
 
-    result=GetDataFromWeb()
+    result=GetDataFromWeb(web)
 
     return result
-def GetDataFromWeb():
+def GetDataFromWeb(web):
     result=[]
     try:
         숫자 = GetTextBySelector('body > table:nth-child(2) > tbody > tr > td > table > tbody > tr:nth-child(1) > td:nth-child(2) > table > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(3) > td > table > tbody > tr:nth-child(1) > td > b > font')

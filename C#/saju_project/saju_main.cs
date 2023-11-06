@@ -26,10 +26,16 @@ namespace saju_project2 {
         }
 
         private async void btn_result_Click_1(object sender, EventArgs e) {
-            var result = ConnectServer();
-            var sajudata=DailySaju.MakeNewSaju(await result);
-            saju_result pop = new saju_result(sajudata);
-            pop.ShowDialog(this);
+            try
+            {
+                var result = ConnectServer();
+                var sajudata = DailySaju.MakeNewSaju(await result);
+                saju_result pop = new saju_result(sajudata);
+                pop.ShowDialog(this);
+            }catch(Exception ex)
+            {
+                MessageBox.Show("에러");
+            }
         }
 
         private UserData GetUserData()

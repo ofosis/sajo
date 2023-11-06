@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 import json
+
 import LuckCrawler as LC
 
 app = Flask(__name__)

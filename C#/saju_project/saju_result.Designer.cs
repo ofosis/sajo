@@ -47,7 +47,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.NaverSummary = new System.Windows.Forms.Label();
+            this.NaverDetail = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -69,7 +71,9 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(203)))), ((int)(((byte)(167)))));
             this.panel2.BackgroundImage = global::saju_project2.Properties.Resources._5_1;
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.NaverDetail);
+            this.panel2.Controls.Add(this.NaverSummary);
+            this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label_animal);
             this.panel2.Controls.Add(this.label_fruit);
             this.panel2.Controls.Add(this.label_taste);
@@ -181,9 +185,9 @@
             this.label_Guide.Font = new System.Drawing.Font("경기천년바탕 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label_Guide.Location = new System.Drawing.Point(42, 428);
             this.label_Guide.Name = "label_Guide";
-            this.label_Guide.Size = new System.Drawing.Size(515, 16);
+            this.label_Guide.Size = new System.Drawing.Size(91, 16);
             this.label_Guide.TabIndex = 12;
-            this.label_Guide.Text = "· 오늘은 매사에 양보하고, 맘에 안 드는 사람이나 일이 있어도 화내지 마세요";
+            this.label_Guide.Text = "· 생활가이드";
             // 
             // label_mind
             // 
@@ -192,9 +196,9 @@
             this.label_mind.Font = new System.Drawing.Font("경기천년바탕 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label_mind.Location = new System.Drawing.Point(42, 346);
             this.label_mind.Name = "label_mind";
-            this.label_mind.Size = new System.Drawing.Size(123, 16);
+            this.label_mind.Size = new System.Drawing.Size(76, 16);
             this.label_mind.TabIndex = 11;
-            this.label_mind.Text = "· 인자,사랑,인(仁)";
+            this.label_mind.Text = "· 마음가짐";
             // 
             // label_body
             // 
@@ -205,7 +209,7 @@
             this.label_body.Name = "label_body";
             this.label_body.Size = new System.Drawing.Size(46, 16);
             this.label_body.TabIndex = 10;
-            this.label_body.Text = "· 심장";
+            this.label_body.Text = "· 신체";
             // 
             // label7
             // 
@@ -340,13 +344,37 @@
             this.label3.Text = "◐ 사주 풀이 ◑";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // label12
             // 
-            this.textBox1.Location = new System.Drawing.Point(443, 32);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 71);
-            this.textBox1.TabIndex = 20;
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("경기천년제목 Bold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label12.Location = new System.Drawing.Point(317, 22);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(172, 24);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "◈ 오늘의 운세 ◈";
+            // 
+            // NaverSummary
+            // 
+            this.NaverSummary.AutoSize = true;
+            this.NaverSummary.BackColor = System.Drawing.Color.Transparent;
+            this.NaverSummary.Font = new System.Drawing.Font("경기천년바탕 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.NaverSummary.Location = new System.Drawing.Point(318, 60);
+            this.NaverSummary.Name = "NaverSummary";
+            this.NaverSummary.Size = new System.Drawing.Size(51, 16);
+            this.NaverSummary.TabIndex = 21;
+            this.NaverSummary.Text = "한줄평";
+            // 
+            // NaverDetail
+            // 
+            this.NaverDetail.BackColor = System.Drawing.Color.White;
+            this.NaverDetail.Font = new System.Drawing.Font("경기천년바탕 Bold", 12F, System.Drawing.FontStyle.Bold);
+            this.NaverDetail.Location = new System.Drawing.Point(321, 87);
+            this.NaverDetail.Multiline = true;
+            this.NaverDetail.Name = "NaverDetail";
+            this.NaverDetail.Size = new System.Drawing.Size(308, 148);
+            this.NaverDetail.TabIndex = 22;
             // 
             // saju_result
             // 
@@ -394,6 +422,8 @@
         private System.Windows.Forms.Label label_taste;
         private System.Windows.Forms.Label label_fruit;
         private System.Windows.Forms.Label label_animal;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label NaverSummary;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox NaverDetail;
     }
 }
