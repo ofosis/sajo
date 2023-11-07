@@ -1,26 +1,41 @@
 def TranceTimeNum(time):
-    valuedict = {
+    valuedicttime = {
         0 : 99,
-        1 : 0,
-        2 : 2,
-        3 : 4,
-        4 : 6,
-        5 : 8,
-        6 : 10,
-        7 : 12,
-        8 : 14,
-        9 : 16,
-        10 : 18,
-        11 : 20,
-        12 : 22
+        1 : 1,
+        2 : 1,
+        3 : 2,
+        4 : 3,
+        5 : 4,
+        6 : 5,
+        7 : 1,
+        8 : 2,
+        9 : 3,
+        10 : 4,
+        11 : 5,
+        12 : 2
     }
-    return valuedict[time]
+    valuedict = {
+        0: 99,
+        1: 2,
+        2: 0,
+        3: 0,
+        4: 0,
+        5: 0,
+        6: 0,
+        7: 1,
+        8: 1,
+        9: 1,
+        10: 1,
+        11: 1,
+        12: 2
+    }
+    return valuedict[time],valuedicttime[time]
 
 def TranceCalendar(calendar):
     valuedict = {
-        '양력/평달' : 1,
-        '음력/평달' : 2,
-        '음력/윤달' : 3
+        '양력/평달' : "/li[1]",
+        '음력/평달' : "/li[2]",
+        '음력/윤달' : "/li[3]"
     }
     return valuedict[calendar]
 
