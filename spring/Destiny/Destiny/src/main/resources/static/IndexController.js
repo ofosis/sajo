@@ -2,7 +2,6 @@ alert("test");
 
 document.getElementById("sendbtn").addEventListener("click", function (event) {
     event.preventDefault();
-    alert(document.getElementById("mNA"));
     const name = document.getElementById("mNA").value;
     const birthyear = document.getElementById("mYY").value;
     const birthmonth = document.getElementById("mMM").value;
@@ -11,31 +10,32 @@ document.getElementById("sendbtn").addEventListener("click", function (event) {
     const gender = document.getElementById("mSE").value;
     const month = document.getElementById("mSL").value;
 
-    const Data={
-        sajuname : mNA,
-        sajubirthyear : mYY,
-        sajubirthmonth : mMM,
-        sajubirthday : mDD,
-        sajubirthtime : mHH,
-        sajugender : mSE,
-        sajumonth : mSL
-    }
+    const Data = {
+        Name: name,
+        BirthYear: birthyear,
+        BirthMonth: birthmonth,
+        BirthDay: birthday,
+        BirthTime: birthtime,
+        isMale: gender,
+        Calendar: month
+    };
+
     sendDataToServer(Data);
 });
 
-function sendDataToServer(Data)
-{
-    fetch('http://127.0.0.1:5000/', {
+function sendDataToServer(Data) {
+    fetch('http://127.0.0.1:5000/send-json', {
         method: 'POST',
         body: JSON.stringify(Data),
         headers: {
             'Content-Type': 'application/json',
-        },
-        mode : 'no-cors',
+        }
     })
     .then(response => response.json())
     .then(data => {
         document.getElementById('response').innerText = JSON.stringify(data, null, 6);
+    })
+    .catch(error => {
+        console.error('오류 발생:', error);
     });
 }
-
