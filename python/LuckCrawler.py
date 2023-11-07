@@ -1,5 +1,5 @@
 from GetDataWithsaju import GetLuckyItem
-from GetDataWithNaver import TODOTest,doTodayNaver
+from GetDataWithNaver import doTodayNaver
 def TranceLuckData(userdata):
     data = GetLuck(userdata)
     result = {

@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify
 import json
 import test
 from flask_cors import CORS
+import LuckCrawler as LC
+
 app = Flask(__name__)
 CORS(app)
 
@@ -9,15 +11,10 @@ CORS(app)
 def process_post_request():
     try:
         data = request.get_json()
-        print("완료")
-        # 여기에서 데이터를 처리하고 응답을 생성합니다.
-        json_result = test.test1(data)
-        print("완료")
-        # JSON 파일로 저장
+        json_result = LC.TranceLuckData(data)
         json_data = json.dumps(json_result, ensure_ascii=False)
-        #json_variable = json_data
-        print("완료")
-        return jsonify(json_data)
+        json_variable = json_data
+        return jsonify(json_variable)
     except Exception as e:
         print("에러 발생:", repr(e))
         return str(e), 400
