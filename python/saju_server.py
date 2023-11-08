@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify
 import json
-import test
 from flask_cors import CORS
 import LuckCrawler as LC
 

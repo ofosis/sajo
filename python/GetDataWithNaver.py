@@ -1,5 +1,3 @@
-import time
-
 from CrawlerController import *
 from UserDataConverter import *
 
@@ -21,8 +19,7 @@ def doTodayNaver(userdata):
     시간 = f"/li[{TranceTimeNumNaver(userdata['BirthTime'])}]"
     ClickValueByXPATH(web,xpath+'div[3]/ul[2]',시간)
 
-    a=web.find_element(By.XPATH,'/html/body/div[3]/div[2]/div/div[1]/section[1]/div/div[2]/div[2]/div[1]/fieldset/input')
-    a.click()
+    web.find_element(By.XPATH,'/html/body/div[3]/div[2]/div/div[1]/section[1]/div/div[2]/div[2]/div[1]/fieldset/input').click()
 
     result=GetDataFromWeb(web)
     return result

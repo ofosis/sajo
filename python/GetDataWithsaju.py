@@ -1,5 +1,3 @@
-import time
-
 from CrawlerController import *
 from UserDataConverter import *
 
@@ -24,7 +22,8 @@ def GetLuckyItem(userdata):
         SendKeyByName(xpath+'tr[2]/td/table/tbody/tr/td[2]/select[2]', 일)
 
     시간,횟수 = TranceTimeNum(userdata['BirthTime'])
-    SendKeyBy(xpath+'tr[2]/td/table/tbody/tr/td[2]/select[3]', 시간,횟수)
+    if 시간!=99:
+        SendKeyBy(xpath+'tr[2]/td/table/tbody/tr/td[2]/select[3]', 시간,횟수)
 
     성별 = '남성' if userdata['isMale']=='0' else '여성'
     SendKeyByName(xpath+'tr[3]/td/table/tbody/tr/td[1]/table/tbody/tr/td[2]/select', 성별)
