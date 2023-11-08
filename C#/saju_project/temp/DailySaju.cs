@@ -19,8 +19,8 @@ namespace saju_project2.temp
         public string BodyParts;
         public string Mind;
         public string Guide;
-        public string NaverSummary; //이름 바꿔야됨
-        public string NaverDetail; //이것도
+        public string NaverSummary;
+        public string NaverDetail;
 
         public DailySaju(int num, string direction, string color, string flavor, string fruit, string animal, string bodyParts, string mind, string guide, string naver1, string naver2)
         {

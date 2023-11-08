@@ -39,9 +39,13 @@ namespace saju_project2 {
             int year = Convert.ToInt32(cbox_year.Text);
             int month = Convert.ToInt32(cbox_month.Text);
             int day = Convert.ToInt32(cbox_day.Text);
-            var time = GetBirthTime(cbox_time.SelectedIndex);
-            bool isMale = cbox_gender.Text.Equals("남자") ? true : false;
-            string calendar = cbox_month2.Text;
+            int time = cbox_time.SelectedIndex;
+            if (time == 0)
+            {
+                time = 99;
+            }
+            int isMale = cbox_gender.Text.Equals("남자") ? 0 : 1;
+            int calendar = cbox_month2.SelectedIndex;
             var data = new UserData(name, year, month, day, time, isMale, calendar);
             return data;
         }
@@ -58,7 +62,7 @@ namespace saju_project2 {
 
                     var content = new StringContent(requestData, Encoding.UTF8, "application/json");
 
-                    HttpResponseMessage response = await client.PostAsync("http://127.0.0.1:5000", content);
+                    HttpResponseMessage response = await client.PostAsync("http://127.0.0.1:5000/send-json", content);
                     response.EnsureSuccessStatusCode(); // 응답이 성공이면 진행
 
                     string responseText = await response.Content.ReadAsStringAsync();

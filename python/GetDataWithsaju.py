@@ -13,22 +13,22 @@ def GetLuckyItem(userdata):
     년도 = userdata['BirthYear']
     SendKeyByName(xpath+'tr[2]/td/table/tbody/tr/td[2]/input', 년도)
 
-    월 = userdata['BirthMonth']
+    월 = int(userdata['BirthMonth'])
     if 월 != 1:
         SendKeyByName(xpath+'tr[2]/td/table/tbody/tr/td[2]/select[1]', 월)
 
-    일 = userdata['BirthDay']
+    일 = int(userdata['BirthDay'])
     if 일!=1:
         SendKeyByName(xpath+'tr[2]/td/table/tbody/tr/td[2]/select[2]', 일)
 
-    시간,횟수 = TranceTimeNum(userdata['BirthTime'])
+    시간,횟수 = TranceTimeNum(str(userdata['BirthTime']))
     if 시간!=99:
         SendKeyBy(xpath+'tr[2]/td/table/tbody/tr/td[2]/select[3]', 시간,횟수)
 
-    성별 = '남성' if userdata['isMale']=='0' else '여성'
+    성별 = '남성' if str(userdata['isMale'])=='0' else '여성'
     SendKeyByName(xpath+'tr[3]/td/table/tbody/tr/td[1]/table/tbody/tr/td[2]/select', 성별)
 
-    달력 = TranceCalendarSaju(userdata['Calendar'])
+    달력 = TranceCalendarSaju(str(userdata['Calendar']))
     SendKeyByName(xpath+'tr[3]/td/table/tbody/tr/td[3]/table/tbody/tr/td[2]/select', 달력)
 
     web.execute_script("javascript:FormCheck()")

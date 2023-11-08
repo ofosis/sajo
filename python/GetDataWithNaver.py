@@ -7,16 +7,16 @@ def doTodayNaver(userdata):
 
     xpath='/html/body/div[3]/div[2]/div/div[1]/section[1]/div/div[2]/div[2]/div[1]/fieldset/'
 
-    성별 = 'div[1]/label[1]' if userdata['isMale']=='0' else 'div[1]/label[2]'
+    성별 = 'div[1]/label[1]' if str(userdata['isMale'])=='0' else 'div[1]/label[2]'
     ClickValueForGender(xpath+성별)
 
     생년월일=TranceBirthDay(userdata)
     SendValueByXPATH(xpath+'div[2]/input',생년월일)
 
-    달력 = TranceCalendarNaver(userdata['Calendar'])
+    달력 = TranceCalendarNaver(str(userdata['Calendar']))
     ClickValueByXPATH(web,xpath+'div[3]/ul[1]',달력)
 
-    시간 = f"/li[{TranceTimeNumNaver(userdata['BirthTime'])}]"
+    시간 = f"/li[{TranceTimeNumNaver(str(userdata['BirthTime']))}]"
     ClickValueByXPATH(web,xpath+'div[3]/ul[2]',시간)
 
     web.find_element(By.XPATH,'/html/body/div[3]/div[2]/div/div[1]/section[1]/div/div[2]/div[2]/div[1]/fieldset/input').click()
