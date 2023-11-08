@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Saju.com</title>
+    <style>
+        #titletable{
+            width:100%;
+            border:0;
+            height:100px;
+            font-size:45px;
+            line-height: 100px;
+            text-align:center;
+            color:#FFFFFF;
+            background-color:#9900FF;
+
+        }
+        #subtitle{
+            width:100%;
+            color:#FFFFFF;
+            height:32;
+            font-size:15px;
+        }
+    </style>
+</head>
+</html>
+<div id="titletable" >
+    <p style="justify-content:center"> Saju.com </p>
+</div>
+
+<table >
+    <tbody>
+    <tr >
+        <td background="https://img.sazoo.com:8090/ss/images/ss/default/sazoo/digi_input_bg_img.gif" >
+            <table id="subtitle" >
+                <tr>
+                    <th>
+                        <span text-align="center">생년월일시 정보를 입력하여 주십시요.</span>
+                    </th>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td bgcolor="DBDBDB" style="padding:1px">
+            <table width="100%" border="0" cellpadding="0" cellspacing="4" bgcolor="#FFFFFF">
+                <tbody>
+                <tr>
+                    <td bgcolor="F7F7F7"
+                        style="padding-left:22px; padding-right:40px; padding-top:18px; padding-bottom:17px">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td height="30">
+                                    <table border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                        <tr>
+                                            <td width="80"><b>성명</b></td>
+                                            <td><input name="mNA" type="text" size="12" value=""></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="30">
+                                    <table border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                        <tr>
+                                            <td width="80"><b>생년월일시</b></td>
+                                            <td>
+                                                <input name="mYY" type="text" size="4" value=""
+                                                       onkeyup="javascript:moveFocus(4,this,document.inputForm.mMM);">
+                                                년
+                                                <select name="mMM">
+                                                    <script language="JavaScript">
+                                                        <!--
+                                                            writeSelectMonth()
+                                                        //-->
+                                                    </script>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+
+                                                </select>
+                                                월
+                                                <select name="mDD">
+                                                    <script language="JavaScript">
+                                                        <!--
+                                                            writeSelectDay()
+                                                        //-->
+                                                    </script>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                    <option value="21">21</option>
+                                                    <option value="22">22</option>
+                                                    <option value="23">23</option>
+                                                    <option value="24">24</option>
+                                                    <option value="25">25</option>
+                                                    <option value="26">26</option>
+                                                    <option value="27">27</option>
+                                                    <option value="28">28</option>
+                                                    <option value="29">29</option>
+                                                    <option value="30">30</option>
+                                                    <option value="31">31</option>
+
+                                                </select>
+                                                일
+                                                <select name="mHH">
+                                                    <script language="JavaScript">
+                                                        <!--
+                                                            writeSelectHH()
+                                                        //-->
+                                                    </script>
+                                                    <option value="99">생시모름</option>
+                                                    <option value="0">23:30~01:30 [자시]</option>
+                                                    <option value="2">01:30~03:30 [축시]</option>
+                                                    <option value="4">03:30~05:30 [인시]</option>
+                                                    <option value="6">05:30~07:30 [묘시]</option>
+                                                    <option value="8">07:30~09:30 [진시]</option>
+                                                    <option value="10">09:30~11:30 [사시]</option>
+                                                    <option value="12">11:30~13:30 [오시]</option>
+                                                    <option value="14">13:30~15:30 [미시]</option>
+                                                    <option value="16">15:30~17:30 [신시]</option>
+                                                    <option value="18">17:30~19:30 [유시]</option>
+                                                    <option value="20">19:30~21:30 [술시]</option>
+                                                    <option value="22">21:30~23:30 [해시]</option>
+
+                                                </select>
+                                                시 출생
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="30">
+                                    <table border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <table border="0" cellspacing="0" cellpadding="0">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td width="80"><b>성별</b></td>
+                                                        <td>
+                                                            <select name="mSE">
+                                                                <script language="JavaScript">
+                                                                    <!--
+                                                                    writeSelectSex()
+                                                                    //-->
+                                                                </script>
+                                                                <option value="0">남자</option>
+                                                                <option value="1">여자</option>
+
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td width="20"></td>
+                                            <td>
+                                                <table border="0" cellspacing="0" cellpadding="0">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td width="120"><b>양,음력</b>(평달,윤달)</td>
+                                                        <td>
+                                                            <select name="mSL">
+                                                                <script language="JavaScript">
+                                                                    <!--
+                                                                    writeSelectLP()
+                                                                    //-->
+                                                                </script>
+                                                                <option value="0">양력/평달</option>
+                                                                <option value="1">음력/평달</option>
+                                                                <option value="2">음력/윤달</option>
+
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td width="20"></td>
+                                            <td>
+                                                <!-- <table  border="0" cellspacing="0" cellpadding="0">										<tr>											<td width="55"><b>평/윤달</b></td>											<td><select name="select6">													<option selected>선택</option>											</select></td>										</tr>									</table> -->
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table>
+                <tbody>
+                <tr>
+                    <td height="15">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td><a href="result">
+                                    <img src="https://img.sazoo.com:8090/ss/images/ss/default/sazoo/digi_freestart_bt.gif"
+                                        width="105" height="25" border="0"></a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<script language="JavaScript">
+    <!--
+    writeInputHidden('')
+    //-->
+</script>
+<input type="hidden" name="" value="undefined">
+
+<input type="hidden" name="kind" value="">
+<!-- 오늘의 테마궁합운 같이 폼 범위에 벗어낫을경우 (예> 테마궁합운 리스트)
+오늘운궁합운 같이 다른폼에 값도 같이 넘길려면 input hidden 폼하나 추가 폼네임은 kind 로 약속-->
+
+</tbody></table>
+
+
+<!-- 정보입력폼 끝-->
+</td>
+</tr>
+<tr>
+    <td>
+        <!-- 이용안내 시작-->
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr>
+                <td bgcolor="ECECEC" style="padding:1px">
+                    <table width="100%" border="0" cellpadding="0" cellspacing="4" bgcolor="#FFFFFF">
+                        <tbody>
+                        <tr>
+                            <td bgcolor="F7F7F7"
+                                style="padding-top:10px; padding-right:10px; padding-left:10px; padding-bottom:8px">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                    <tr>
+                                        <td>※ 본 컨텐츠는 재미있는 사주보기입니다.<br>
+                                            &nbsp;&nbsp;&nbsp; ***즐거운 시간되세요***.
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <!-- 이용안내 끝-->
