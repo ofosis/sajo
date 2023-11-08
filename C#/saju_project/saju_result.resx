@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label17.Text" xml:space="preserve">
+    <value>· 예상치 못했던 곳에서 방해 세력이 미치는 날입니다. 자신의 의견에 반대하는 무리가 생기니 마음이 그리 편치 못합니다. 또한 자신이 생각했던 대로 일이 풀리지 않기 때문에 심신이 피로하기 쉽습니다. 주변 사람과의 관계에서도 사소한 말실수로 인해 관계에 악영향을 미치는 경우도 생길 수 있습니다. 자신과 다른 사람의 의견을 함께 생각하는 방향으로 나아가야 어려움이 없습니다. 무리하게 일을 추진하기 보다 주변의 이해를 구하도록 노력하세요. 이해를 통해 지원을 얻고 진행하는 편이 몸과 마음이 편합니다.</value>
+  </data>
 </root>
