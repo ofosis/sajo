@@ -27,6 +27,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label_animal = new System.Windows.Forms.Label();
             this.label_fruit = new System.Windows.Forms.Label();
+            this.label_NaverDetail = new System.Windows.Forms.Label();
+            this.label_NaverSummary = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.label_taste = new System.Windows.Forms.Label();
             this.label_color = new System.Windows.Forms.Label();
             this.label_direction = new System.Windows.Forms.Label();
@@ -35,7 +38,7 @@
             this.label_Guide = new System.Windows.Forms.Label();
             this.label_mind = new System.Windows.Forms.Label();
             this.label_body = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -67,9 +70,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(203)))), ((int)(((byte)(167)))));
-            this.panel2.BackgroundImage = global::saju_project2.Properties.Resources._5_1;
             this.panel2.Controls.Add(this.label_animal);
             this.panel2.Controls.Add(this.label_fruit);
+            this.panel2.Controls.Add(this.label_NaverDetail);
+            this.panel2.Controls.Add(this.label_NaverSummary);
+            this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.label_taste);
             this.panel2.Controls.Add(this.label_color);
             this.panel2.Controls.Add(this.label_direction);
@@ -78,7 +83,7 @@
             this.panel2.Controls.Add(this.label_Guide);
             this.panel2.Controls.Add(this.label_mind);
             this.panel2.Controls.Add(this.label_body);
-            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label9);
@@ -91,7 +96,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 115);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(674, 528);
+            this.panel2.Size = new System.Drawing.Size(674, 610);
             this.panel2.TabIndex = 16;
             // 
             // label_animal
@@ -99,33 +104,65 @@
             this.label_animal.AutoSize = true;
             this.label_animal.BackColor = System.Drawing.Color.Transparent;
             this.label_animal.Font = new System.Drawing.Font("경기천년바탕 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_animal.Location = new System.Drawing.Point(101, 190);
+            this.label_animal.Location = new System.Drawing.Point(307, 112);
             this.label_animal.Name = "label_animal";
-            this.label_animal.Size = new System.Drawing.Size(37, 16);
-            this.label_animal.TabIndex = 19;
-            this.label_animal.Text = "동물";
+            this.label_animal.Size = new System.Drawing.Size(21, 16);
+            this.label_animal.TabIndex = 22;
+            this.label_animal.Text = "??";
             // 
             // label_fruit
             // 
             this.label_fruit.AutoSize = true;
             this.label_fruit.BackColor = System.Drawing.Color.Transparent;
             this.label_fruit.Font = new System.Drawing.Font("경기천년바탕 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_fruit.Location = new System.Drawing.Point(101, 164);
+            this.label_fruit.Location = new System.Drawing.Point(303, 86);
             this.label_fruit.Name = "label_fruit";
-            this.label_fruit.Size = new System.Drawing.Size(36, 16);
-            this.label_fruit.TabIndex = 18;
-            this.label_fruit.Text = "과일";
+            this.label_fruit.Size = new System.Drawing.Size(21, 16);
+            this.label_fruit.TabIndex = 21;
+            this.label_fruit.Text = "??";
+            // 
+            // label_NaverDetail
+            // 
+            this.label_NaverDetail.BackColor = System.Drawing.Color.Transparent;
+            this.label_NaverDetail.Font = new System.Drawing.Font("경기천년바탕 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_NaverDetail.Location = new System.Drawing.Point(43, 452);
+            this.label_NaverDetail.Name = "label_NaverDetail";
+            this.label_NaverDetail.Size = new System.Drawing.Size(536, 127);
+            this.label_NaverDetail.TabIndex = 20;
+            this.label_NaverDetail.Text = "· ??";
+            // 
+            // label_NaverSummary
+            // 
+            this.label_NaverSummary.AutoSize = true;
+            this.label_NaverSummary.BackColor = System.Drawing.Color.Transparent;
+            this.label_NaverSummary.Font = new System.Drawing.Font("경기천년바탕 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_NaverSummary.Location = new System.Drawing.Point(43, 426);
+            this.label_NaverSummary.Name = "label_NaverSummary";
+            this.label_NaverSummary.Size = new System.Drawing.Size(31, 16);
+            this.label_NaverSummary.TabIndex = 19;
+            this.label_NaverSummary.Text = "· ??";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("경기천년제목 Bold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label16.Location = new System.Drawing.Point(30, 387);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(172, 24);
+            this.label16.TabIndex = 18;
+            this.label16.Text = "◈ 오늘의 운세 ◈";
             // 
             // label_taste
             // 
             this.label_taste.AutoSize = true;
             this.label_taste.BackColor = System.Drawing.Color.Transparent;
             this.label_taste.Font = new System.Drawing.Font("경기천년바탕 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_taste.Location = new System.Drawing.Point(90, 138);
+            this.label_taste.Location = new System.Drawing.Point(292, 60);
             this.label_taste.Name = "label_taste";
-            this.label_taste.Size = new System.Drawing.Size(22, 16);
+            this.label_taste.Size = new System.Drawing.Size(21, 16);
             this.label_taste.TabIndex = 17;
-            this.label_taste.Text = "맛";
+            this.label_taste.Text = "??";
             // 
             // label_color
             // 
@@ -134,9 +171,9 @@
             this.label_color.Font = new System.Drawing.Font("경기천년바탕 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label_color.Location = new System.Drawing.Point(105, 113);
             this.label_color.Name = "label_color";
-            this.label_color.Size = new System.Drawing.Size(38, 16);
+            this.label_color.Size = new System.Drawing.Size(21, 16);
             this.label_color.TabIndex = 16;
-            this.label_color.Text = "색깔";
+            this.label_color.Text = "??";
             // 
             // label_direction
             // 
@@ -145,9 +182,9 @@
             this.label_direction.Font = new System.Drawing.Font("경기천년바탕 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label_direction.Location = new System.Drawing.Point(105, 87);
             this.label_direction.Name = "label_direction";
-            this.label_direction.Size = new System.Drawing.Size(37, 16);
+            this.label_direction.Size = new System.Drawing.Size(21, 16);
             this.label_direction.TabIndex = 15;
-            this.label_direction.Text = "방향";
+            this.label_direction.Text = "??";
             // 
             // label_number
             // 
@@ -156,15 +193,15 @@
             this.label_number.Font = new System.Drawing.Font("경기천년바탕 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label_number.Location = new System.Drawing.Point(101, 60);
             this.label_number.Name = "label_number";
-            this.label_number.Size = new System.Drawing.Size(37, 16);
+            this.label_number.Size = new System.Drawing.Size(21, 16);
             this.label_number.TabIndex = 14;
-            this.label_number.Text = "숫자";
+            this.label_number.Text = "??";
             // 
             // btn_result
             // 
             this.btn_result.BackColor = System.Drawing.Color.Peru;
             this.btn_result.Font = new System.Drawing.Font("경기천년바탕 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_result.Location = new System.Drawing.Point(301, 491);
+            this.btn_result.Location = new System.Drawing.Point(292, 575);
             this.btn_result.Name = "btn_result";
             this.btn_result.Size = new System.Drawing.Size(82, 29);
             this.btn_result.TabIndex = 13;
@@ -177,51 +214,51 @@
             this.label_Guide.AutoSize = true;
             this.label_Guide.BackColor = System.Drawing.Color.Transparent;
             this.label_Guide.Font = new System.Drawing.Font("경기천년바탕 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_Guide.Location = new System.Drawing.Point(42, 428);
+            this.label_Guide.Location = new System.Drawing.Point(42, 349);
             this.label_Guide.Name = "label_Guide";
-            this.label_Guide.Size = new System.Drawing.Size(515, 16);
+            this.label_Guide.Size = new System.Drawing.Size(31, 16);
             this.label_Guide.TabIndex = 12;
-            this.label_Guide.Text = "· 오늘은 매사에 양보하고, 맘에 안 드는 사람이나 일이 있어도 화내지 마세요";
+            this.label_Guide.Text = "· ??";
             // 
             // label_mind
             // 
             this.label_mind.AutoSize = true;
             this.label_mind.BackColor = System.Drawing.Color.Transparent;
             this.label_mind.Font = new System.Drawing.Font("경기천년바탕 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_mind.Location = new System.Drawing.Point(42, 346);
+            this.label_mind.Location = new System.Drawing.Point(42, 267);
             this.label_mind.Name = "label_mind";
-            this.label_mind.Size = new System.Drawing.Size(123, 16);
+            this.label_mind.Size = new System.Drawing.Size(31, 16);
             this.label_mind.TabIndex = 11;
-            this.label_mind.Text = "· 인자,사랑,인(仁)";
+            this.label_mind.Text = "· ??";
             // 
             // label_body
             // 
             this.label_body.AutoSize = true;
             this.label_body.BackColor = System.Drawing.Color.Transparent;
             this.label_body.Font = new System.Drawing.Font("경기천년바탕 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_body.Location = new System.Drawing.Point(42, 269);
+            this.label_body.Location = new System.Drawing.Point(42, 190);
             this.label_body.Name = "label_body";
-            this.label_body.Size = new System.Drawing.Size(46, 16);
+            this.label_body.Size = new System.Drawing.Size(31, 16);
             this.label_body.TabIndex = 10;
-            this.label_body.Text = "· 심장";
+            this.label_body.Text = "· ??";
             // 
-            // label7
+            // label12
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("경기천년바탕 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(42, 190);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 16);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "· 동물 : ";
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("경기천년바탕 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label12.Location = new System.Drawing.Point(244, 112);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(62, 16);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "· 동물 : ";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("경기천년바탕 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label11.Location = new System.Drawing.Point(42, 164);
+            this.label11.Location = new System.Drawing.Point(244, 86);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(61, 16);
             this.label11.TabIndex = 8;
@@ -232,7 +269,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("경기천년바탕 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label10.Location = new System.Drawing.Point(42, 138);
+            this.label10.Location = new System.Drawing.Point(244, 60);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(42, 16);
             this.label10.TabIndex = 7;
@@ -276,7 +313,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("경기천년제목 Bold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(29, 389);
+            this.label6.Location = new System.Drawing.Point(29, 310);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(167, 24);
             this.label6.TabIndex = 3;
@@ -287,7 +324,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("경기천년제목 Bold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(29, 308);
+            this.label5.Location = new System.Drawing.Point(29, 229);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(146, 24);
             this.label5.TabIndex = 2;
@@ -298,7 +335,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("경기천년제목 Bold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(29, 230);
+            this.label4.Location = new System.Drawing.Point(29, 151);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(187, 24);
             this.label4.TabIndex = 1;
@@ -342,11 +379,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(674, 643);
+            this.ClientSize = new System.Drawing.Size(674, 725);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.MaximumSize = new System.Drawing.Size(690, 682);
             this.MinimumSize = new System.Drawing.Size(690, 682);
             this.Name = "saju_result";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -371,7 +407,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label_body;
         private System.Windows.Forms.Label label_mind;
         private System.Windows.Forms.Label label_Guide;
@@ -382,7 +418,10 @@
         private System.Windows.Forms.Label label_color;
         private System.Windows.Forms.Label label_direction;
         private System.Windows.Forms.Label label_taste;
-        private System.Windows.Forms.Label label_fruit;
         private System.Windows.Forms.Label label_animal;
+        private System.Windows.Forms.Label label_fruit;
+        private System.Windows.Forms.Label label_NaverDetail;
+        private System.Windows.Forms.Label label_NaverSummary;
+        private System.Windows.Forms.Label label16;
     }
 }
