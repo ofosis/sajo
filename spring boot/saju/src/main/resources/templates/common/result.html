@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <style>
+        html, body{
+            width: 800px;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #title_image{
+            width:800px;
+            height:100px;
+            background:url('/images/title_image.jpg');
+            text-align:center;
+            font-size:60px;
+            font-weight : bold;
+        }
+        #title_under{
+            width:800px;
+            height:35px;
+            line-height:35px;
+            font-size:17px;
+            font-weight : bold;
+            text-align:center;
+            color:#FFFFFF;
+            background-color:#f4a361;
+        }
+        #main_image{
+            width: 800px;
+            height: 800px;
+            background:url('/images/main_image.png');
+            background-repeat: no-repeat;
+            position: relative;
+
+        }
+        #btn{
+            position: absolute;
+            bottom: 20px;
+            line-height:20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 40px;
+            font-size:20px;
+            font-weight : bold;
+            background-color:#f4a361;
+       }
+
+    </style>
+</head>
+<body>
+<div id="response"></div>
+<div>
+    <div id="title_image">
+        ◐ 사주 풀이 ◑
+    </div>
+
+    <div id="title_under">
+        오늘의 행운아이템 결과입니다.
+    </div>
+
+    <div id="main_image">
+        <form class="row g-3" style="font-weight:bold;">
+            <div id="lucky_item" style="padding: 10px 0px 0px 20px;">
+                <div class="col-md-12">
+                <label class="form-label" style="font-size: 23px;"> ◈ 행운 아이템 ◈ </label>
+                </div>
+                <div style="width:50%; float:left;">
+                    <div style="padding: 10px 0px 3px 20px;">
+                        <label class="form-label"> · 숫자 : </label>
+                        <label class="form-label" id="Num"> 1 </label>
+                    </div>
+                    <div style="padding: 10px 0px 3px 20px;">
+                        <label class="form-label"> · 방향 : </label>
+                        <label class="form-label" id="Direction"> 북쪽 </label>
+                    </div>
+                    <div style="padding: 10px 0px 20px 20px;">
+                        <label class="form-label" > · 색깔 : </label>
+                        <label class="form-label" id="Color"> 검정 계열 </label>
+                    </div>
+                </div>
+
+                <div style="width:50%; float:right;">
+                    <div style="padding: 10px 0px 3px 0px;">
+                        <label class="form-label" > · 맛 : </label>
+                        <label class="form-label" id="Flavor"> 짠맛 </label>
+                    </div>
+                    <div style="padding: 10px 0px 3px 0px;">
+                        <label class="form-label" > · 과일 : </label>
+                        <label class="form-label" id="Fruit"> 수박 </label>
+                    </div>
+                    <div style="padding: 10px 0px 20px 0px;">
+                        <label class="form-label" > · 동물 : </label>
+                        <label class="form-label" id="Animal"> 거북이 </label>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div id="danger_body" style="padding: 10px 0px 10px 20px;">
+                <div style="font-weight:bold; font-size: 23px; width:100%">
+                    <label> ◈ 주의신체부위 ◈ </label>
+                </div>
+                <div style="padding: 10px 0px 0px 20px;">
+                    <div style="font-weight:bold; padding: 7px 0px 5px 0px;">
+                        <label> · </label>
+                        <label id="BodyParts"> 심장 </label>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mind_head" style="padding: 10px 0px 10px 20px;">
+                <div style="font-weight:bold; font-size: 23px; width:100%">
+                    <label > ◈ 마음가짐 ◈ </label>
+                </div>
+                <div style="padding: 10px 0px 0px 20px;">
+                    <div style="font-weight:bold; padding: 7px 0px 5px 0px;">
+                        <label> · </label>
+                        <label id="Mind"> 인자,사랑,인(仁) </label>
+                    </div>
+                </div>
+            </div>
+
+            <div id="life_guide" style="padding: 10px 0px 10px 20px;">
+                <div style="font-weight:bold; font-size: 23px; width:100%">
+                    <label> ◈ 생활가이드 ◈ </label>
+                </div>
+                <div style="padding: 10px 0px 0px 20px;">
+                    <div style="font-weight:bold; padding: 7px 0px 5px 0px;">
+                        <label> · </label>
+                        <label id="Guide"> 오늘은 매사에 양보하고, 맘에 안 드는 사람이나 일이 있어도 화내지 마세요. </label>
+                    </div>
+                </div>
+            </div>
+
+            <div id="lucky_today" style="padding: 10px 0px 10px 20px;">
+                <div style="font-weight:bold; font-size: 23px; width:100%">
+                    <label> ◈ 오늘의 운세 ◈ </label>
+                </div>
+                <div style="padding: 10px 0px 0px 20px;">
+                    <div style="font-weight:bold; padding: 7px 0px 5px 0px;">
+                        <label> · </label>
+                        <label id="NaverSummary"> 10월 31일의 운세 총운은 “좌절금지” 입니다. </label>
+                    </div>
+                    <div style="font-weight:bold; padding: 7px 100px 5px 0px;">
+                        <label> · </label>
+                        <label id="NaverDetail"> 예상치 못했던 곳에서 방해 세력이 미치는 날입니다.
+                            자신의 의견에 반대하는 무리가 생기니 마음이 그리 편치 못합니다.
+                            또한 자신이 생각했던 대로 일이 풀리지 않기 때문에 심신이 피로하기 쉽습니다.
+                            주변 사람과의 관계에서도 사소한 말실수로 인해 관계에 악영향을 미치는 경우도 생길 수 있습니다.
+                            자신과 다른 사람의 의견을 함께 생각하는 방향으로 나아가야 어려움이 없습니다.
+                            무리하게 일을 추진하기 보다 주변의 이해를 구하도록 노력하세요. 이해를 통해 지원을 얻고
+                            진행하는 편이 몸과 마음이 편합니다. </label>
+                    </div>
+                </div>
+            </div>
+
+            <a href="/">
+                <button type="button" id="btn"> 창 닫기 </button>
+            </a>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>

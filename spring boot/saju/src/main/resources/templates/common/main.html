@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <style>
+        html, body{
+           width: 800px;
+           height: 100%;
+           margin: 0;
+           padding: 0;
+           overflow: hidden;
+       }
+       #title_image{
+           width:800px;
+           height:130px;
+           background:url('/images/title_image.jpg');
+           text-align:center;
+           font-size:60px;
+           font-weight : bold;
+       }
+       #title_under{
+           width:800px;
+           height:35px;
+           line-height:35px;
+           font-size:17px;
+           font-weight : bold;
+           text-align:center;
+           color:#FFFFFF;
+           background-color:#f4a361;
+       }
+       #main_image{
+           width: 800px;
+           height: 400px;
+           background:url('/images/main_image.png');
+           background-repeat: no-repeat;
+           position: relative;
+       }
+
+       #sendbtn{
+           position: absolute;
+           bottom: 60px;
+           left: 50%;
+           transform: translateX(-50%);
+           width: 130px;
+           height: 40px;
+           font-size:25px;
+           font-weight : bold;
+           background-color:#f4a361;
+      }
+
+       #lucky_item{
+           padding: 10px 0px 0px 20px
+       }
+
+        #test{
+           position: absolute;
+           bottom: 1px;
+           left: 50%;
+           transform: translateX(-50%);
+           width: 500px;
+           height: 40px;
+           font-size:15px;
+           font-weight : bold;
+      }
+
+    </style>
+</head>
+<body>
+<div>
+    <div id="title_image">
+        <index>◐ 사주 풀이 ◑</index>
+        <div style="font-size:20px; font-weight : bold;">
+            오늘 당신의 행운을 확인해 보세요 !!!
+        </div>
+    </div>
+    <div id="title_under">
+        생년월일 시 등 정보를 기입해주세요!
+    </div>
+    <div id="main_image">
+        <div id="lucky_item">
+            <form class="row g-3">
+                <div style="font-weight:bold; padding: 30px 0px 30px 10px;">
+                    <label for="mNA" class="form-label" >이   름 </label>
+                    <input type="text" class="form-control" id="mNA" style="margin: 0px 0px 0px 43px; font-size:15px">
+                </div>
+                <div style="width:40%; float:left;">
+                    <label for="mYY" class="form-label" style="font-weight:bold; padding: 10px 0px 50px 10px;">생년월일시  </label>
+                    <input type="text" class="form-control" id="mYY" style="font-size:15px;" >
+                    <label style="font-weight:bold;"> 년</label>
+                </div>
+                <div style="width:13%; float:left; font-weight:bold;">
+                    <label>
+                        <select id="mMM" style="width:70px;font-size:18px">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        월
+                    </label>
+                </div>
+
+                <div style="width:13%; float:left; font-weight:bold;">
+                    <label>
+                        <select id="mDD" style="width:70px;font-size:18px">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                        일
+                    </label>
+                </div>
+                <div style="width:34%; float:right; font-weight:bold;">
+                    <label>
+                        <select id="mHH"  style="width:180px;font-size:18px">
+                            <option value="99">생시모름</option>
+                            <option value="1">23:30~01:30 [자시]</option>
+                            <option value="2">01:30~03:30 [축시]</option>
+                            <option value="3">03:30~05:30 [인시]</option>
+                            <option value="4">05:30~07:30 [묘시]</option>
+                            <option value="5">07:30~09:30 [진시]</option>
+                            <option value="6">09:30~11:30 [사시]</option>
+                            <option value="7">11:30~13:30 [오시]</option>
+                            <option value="8">13:30~15:30 [미시]</option>
+                            <option value="9">15:30~17:30 [신시]</option>
+                            <option value="10">17:30~19:30 [유시]</option>
+                            <option value="11">19:30~21:30 [술시]</option>
+                            <option value="12">21:30~23:30 [해시]</option>
+                        </select>
+                        시 출생
+                    </label>
+                </div>
+
+                <div style="font-weight:bold; padding: 10px 0px 10px 10px; float:left;">
+                    <label style="display:inline-block; width:80px; padding: 25px 0px 30px 0px;"> 성별 </label>
+                    <label>
+                        <select id="mSE" style="width:70px;font-size:18px">
+                            <option value="0">남자</option>
+                            <option value="1">여자</option>
+                        </select>
+
+                    </label>
+
+                    <label style="display:inline-block; width:137px; padding: 10px 0px 20px 100px;"> 양,음력(평달,윤달) </label>
+                    <label>
+                        <select id="mSL" style="width:110px;font-size:18px">
+                            <option value="0">양력/평달</option>
+                            <option value="1">음력/평달</option>
+                            <option value="2">음력/윤달</option>
+                        </select>
+
+                    </label>
+                </div>
+
+                <div id="test">
+                    ※ 본 컨텐츠는 프로젝트의 일환으로 재미로만 즐겨 주시길 바랍니다. ※
+                </div>
+                    <a href="result" >
+                        <button type="button" id="sendbtn">결과 확인 </button>
+                    </a>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="IndexController.js"></script>
+</body>
+</html>
