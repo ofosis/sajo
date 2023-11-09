@@ -2,6 +2,8 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Result</title>
     <style>
         html, body{
@@ -160,13 +162,22 @@
                 </div>
             </div>
 
-            <a href="/">
+            <a href="result">
                 <button type="button" id="btn"> 창 닫기 </button>
             </a>
         </form>
     </div>
 
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
 
+        const resultData = sessionStorage.getItem('resultData');
+
+        document.getElementById('response').innerText = resultData;
+
+        sessionStorage.removeItem('resultData');
+    });
+</script>
 </body>
 </html>

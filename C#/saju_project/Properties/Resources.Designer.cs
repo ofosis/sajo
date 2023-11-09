@@ -115,7 +115,7 @@ namespace saju_project2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _5_1 {
             get {
-                object obj = ResourceManager.GetObject("5.1", resourceCulture);
+                object obj = ResourceManager.GetObject("_5_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

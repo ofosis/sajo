@@ -70,6 +70,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(203)))), ((int)(((byte)(167)))));
+            this.panel2.BackgroundImage = global::saju_project2.Properties.Resources._5_1;
             this.panel2.Controls.Add(this.label_animal);
             this.panel2.Controls.Add(this.label_fruit);
             this.panel2.Controls.Add(this.label_NaverDetail);
@@ -125,6 +126,7 @@
             // 
             this.label_NaverDetail.BackColor = System.Drawing.Color.Transparent;
             this.label_NaverDetail.Font = new System.Drawing.Font("경기천년바탕 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_NaverDetail.ForeColor = System.Drawing.Color.Black;
             this.label_NaverDetail.Location = new System.Drawing.Point(43, 452);
             this.label_NaverDetail.Name = "label_NaverDetail";
             this.label_NaverDetail.Size = new System.Drawing.Size(536, 127);

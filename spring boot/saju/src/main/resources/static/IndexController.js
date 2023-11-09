@@ -33,7 +33,10 @@ function sendDataToServer(Data) {
     })
     .then(response => response.json())
     .then(data => {
-        document.getElementById('response').innerText = JSON.stringify(data, null, 10);
+         sessionStorage.setItem('resultData', JSON.stringify(data));
+
+         // 새로운 페이지로 이동
+         window.location.href = 'result';
     })
     .catch(error => {
         console.error('오류 발생:', error);

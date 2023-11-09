@@ -79,7 +79,7 @@
     </div>
     <div id="main_image">
         <div id="lucky_item">
-            <form class="row g-3">
+            <form class="row g-3" th:action="@{/result}" method="get">
                 <div style="font-weight:bold; padding: 30px 0px 30px 10px;">
                     <label for="mNA" class="form-label" >이   름 </label>
                     <input type="text" class="form-control" id="mNA" style="margin: 0px 0px 0px 43px; font-size:15px">
@@ -192,9 +192,7 @@
                 <div id="test">
                     ※ 본 컨텐츠는 프로젝트의 일환으로 재미로만 즐겨 주시길 바랍니다. ※
                 </div>
-                    <a href="result" >
-                        <button type="button" id="sendbtn">결과 확인 </button>
-                    </a>
+                <button type="button" id="sendbtn">결과 확인 </button>
             </form>
         </div>
     </div>
