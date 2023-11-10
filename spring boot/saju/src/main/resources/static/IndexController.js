@@ -1,5 +1,3 @@
-alert("test");
-
 document.getElementById("sendbtn").addEventListener("click", function (event) {
     event.preventDefault();
     const name = document.getElementById("mNA").value;

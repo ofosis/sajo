@@ -53,10 +53,11 @@
        }
 
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-<div id="response"></div>
 <div>
+    <div id="response"></div>
     <div id="title_image">
         ◐ 사주 풀이 ◑
     </div>
@@ -147,17 +148,11 @@
                 <div style="padding: 10px 0px 0px 20px;">
                     <div style="font-weight:bold; padding: 7px 0px 5px 0px;">
                         <label> · </label>
-                        <label id="NaverSummary"> 10월 31일의 운세 총운은 “좌절금지” 입니다. </label>
+                        <label id="NaverSummary"></label>
                     </div>
                     <div style="font-weight:bold; padding: 7px 100px 5px 0px;">
                         <label> · </label>
-                        <label id="NaverDetail"> 예상치 못했던 곳에서 방해 세력이 미치는 날입니다.
-                            자신의 의견에 반대하는 무리가 생기니 마음이 그리 편치 못합니다.
-                            또한 자신이 생각했던 대로 일이 풀리지 않기 때문에 심신이 피로하기 쉽습니다.
-                            주변 사람과의 관계에서도 사소한 말실수로 인해 관계에 악영향을 미치는 경우도 생길 수 있습니다.
-                            자신과 다른 사람의 의견을 함께 생각하는 방향으로 나아가야 어려움이 없습니다.
-                            무리하게 일을 추진하기 보다 주변의 이해를 구하도록 노력하세요. 이해를 통해 지원을 얻고
-                            진행하는 편이 몸과 마음이 편합니다. </label>
+                        <label id="NaverDetail"></label>
                     </div>
                 </div>
             </div>
@@ -171,13 +166,25 @@
 </div>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-
-        const resultData = sessionStorage.getItem('resultData');
-
-        document.getElementById('response').innerText = resultData;
+        const resultData = JSON.parse(sessionStorage.getItem('resultData'));
+        const data = JSON.parse(resultData);
+        if (resultData) {
+            document.getElementById('Num').textContent =data.Num;
+            document.getElementById('Direction').textContent =data.Direction;
+            document.getElementById('Color').textContent =data.Color;
+            document.getElementById('Flavor').textContent =data.Flavor;
+            document.getElementById('Fruit').textContent =data.Fruit;
+            document.getElementById('Animal').textContent =data.Animal;
+            document.getElementById('BodyParts').textContent =data.BodyParts;
+            document.getElementById('Mind').textContent =data.Mind;
+            document.getElementById('Guide').textContent =data.Guide;
+            document.getElementById('NaverSummary').textContent =data.NaverSummary;
+            document.getElementById('NaverDetail').textContent =data.NaverDetail;
+        }
 
         sessionStorage.removeItem('resultData');
     });
+</script>
 </script>
 </body>
 </html>
